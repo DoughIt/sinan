@@ -3,9 +3,11 @@ package com.doughit.sinan.base
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Toast
+import androidx.annotation.ColorRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
 import com.doughit.sinan.view.LoadingDialog
+import com.gyf.immersionbar.ImmersionBar
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 import java.lang.reflect.ParameterizedType
@@ -113,4 +115,13 @@ abstract class AbsBaseActivity<T : ViewBinding> : AppCompatActivity(),
             loadingDialog?.dismiss()
         }
     }
+
+
+    /**
+     * 设置状态栏背景色
+     */
+    open fun setStatusBarBackground(@ColorRes statusBarColor: Int) {
+        ImmersionBar.with(this).autoStatusBarDarkModeEnable(true, 0.2f).statusBarColor(statusBarColor).fitsSystemWindows(true).init()
+    }
+
 }

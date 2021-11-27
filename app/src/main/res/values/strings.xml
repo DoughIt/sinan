@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">sinan</string>
+    <string name="app_name">sitemap</string>
+    <string name="app_name_zh">司南</string>
+
+    <string name="srl_footer_nothing">没有更多数据了</string>
+    <string name="footer_not_more">- The End -</string>
+
+    <string name="slogan">- Aim at the glory! -</string>
+    <string name="slogan_description">向着光的方向</string>
+
 </resources>

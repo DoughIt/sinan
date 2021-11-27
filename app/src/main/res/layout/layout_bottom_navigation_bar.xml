@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:background="@color/colorPrimary"
+    android:paddingHorizontal="24dp">
+
+    <ImageView
+        android:id="@+id/ivKitPage"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:src="@drawable/ic_kit_selected"
+        app:layout_constraintBottom_toTopOf="@+id/tvKitPage"
+        app:layout_constraintEnd_toStartOf="@id/ivRecommend"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.doughit.sinan.view.TypefaceTextView
+        android:id="@+id/tvKitPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="工具"
+        android:textColor="@color/sel_bottom_navigation_bar_radio_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ivKitPage"
+        app:layout_constraintStart_toStartOf="@id/ivKitPage"
+        app:layout_constraintTop_toBottomOf="@id/ivKitPage"
+        app:typeface="fzlLTypeface" />
+
+    <ImageView
+        android:id="@+id/ivRecommend"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:padding="1dp"
+        android:src="@drawable/ic_location_selected"
+        app:layout_constraintBottom_toTopOf="@id/tvRecommend"
+        app:layout_constraintEnd_toStartOf="@id/ivAdd"
+        app:layout_constraintStart_toEndOf="@id/ivKitPage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.doughit.sinan.view.TypefaceTextView
+        android:id="@+id/tvRecommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="推荐"
+        android:textColor="@color/sel_bottom_navigation_bar_radio_color"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ivRecommend"
+        app:layout_constraintStart_toStartOf="@id/ivRecommend"
+        app:layout_constraintTop_toBottomOf="@+id/ivRecommend"
+        app:typeface="fzlLTypeface" />
+
+    <ImageView
+        android:id="@+id/ivAdd"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_add_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivCommunity"
+        app:layout_constraintStart_toEndOf="@id/ivRecommend"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCommunity"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_community_selected"
+        app:layout_constraintBottom_toTopOf="@id/tvCommunity"
+        app:layout_constraintEnd_toStartOf="@id/ivMine"
+        app:layout_constraintStart_toEndOf="@id/ivAdd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.doughit.sinan.view.TypefaceTextView
+        android:id="@+id/tvCommunity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="社区"
+        android:textColor="@color/sel_bottom_navigation_bar_radio_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ivCommunity"
+        app:layout_constraintStart_toStartOf="@id/ivCommunity"
+        app:layout_constraintTop_toBottomOf="@+id/ivCommunity"
+        app:typeface="fzlLTypeface" />
+
+    <ImageView
+        android:id="@+id/ivMine"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_profile_selected"
+        app:layout_constraintBottom_toTopOf="@id/tvMine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivCommunity"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.doughit.sinan.view.TypefaceTextView
+        android:id="@+id/tvMine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="我的"
+        android:textColor="@color/sel_bottom_navigation_bar_radio_color"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ivMine"
+        app:layout_constraintStart_toStartOf="@id/ivMine"
+        app:layout_constraintTop_toBottomOf="@+id/ivMine"
+        app:typeface="fzlLTypeface" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/btnKitPage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvKitPage"
+        app:layout_constraintEnd_toEndOf="@id/ivKitPage"
+        app:layout_constraintStart_toStartOf="@id/ivKitPage"
+        app:layout_constraintTop_toTopOf="@+id/ivKitPage"
+        tools:background="@color/blackAlpha50" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/btnCommunity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCommunity"
+        app:layout_constraintEnd_toEndOf="@id/ivCommunity"
+        app:layout_constraintStart_toStartOf="@id/ivCommunity"
+        app:layout_constraintTop_toTopOf="@+id/ivCommunity"
+        tools:background="@color/blackAlpha50" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/btnRecommend"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRecommend"
+        app:layout_constraintEnd_toEndOf="@id/ivRecommend"
+        app:layout_constraintStart_toStartOf="@id/ivRecommend"
+        app:layout_constraintTop_toTopOf="@+id/ivRecommend"
+        tools:background="@color/blackAlpha50" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/btnMine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMine"
+        app:layout_constraintEnd_toEndOf="@id/ivMine"
+        app:layout_constraintStart_toStartOf="@id/ivMine"
+        app:layout_constraintTop_toTopOf="@+id/ivMine"
+        tools:background="@color/blackAlpha50" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
